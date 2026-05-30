@@ -1,0 +1,81 @@
+<%- include('includes/head.ejs') %>
+
+<body>
+<!-- Header -->
+     <header>
+        <div class="header">
+            <div class="logo nav">
+                <i class="fa-solid fa-bars"></i>
+                <img src="Photoes/Logo-removebg-preview.png" alt="">
+            </div>
+            <div class="cart"><i class="fa-solid fa-cart-arrow-down"></i></div>
+        </div>
+
+        <div class="search">
+            <input  type="search" placeholder="Search For Product And More">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </header>
+
+    <!-- Product details -->
+  <div class="product_category">
+    <% data.items.forEach(item => { %>
+
+      <div class="p1">
+        <div class="img-box">
+          <img src="/photoes/<%= item.image %>" alt="<%= item.name %>">
+        </div>
+        <p class="item-name"><%= item.name %></p>
+      </div>
+    <% }) %>
+  </div>
+
+  <!-- Banner -->
+
+<div class="banner">
+  <% data.banner.forEach(banner => { %>
+    <img src="/photoes/<%= banner.image %>" alt="Banner">
+  <% }) %>
+</div>
+
+<!-- Live Sale -->
+
+ <div class="live_sale">
+        <div class="deals">
+            <h3>Deals Of The Day</h3>
+            <h2 id="timer">20:00</h2>
+        </div>
+        <button>Sale is Live </button>
+    </div>
+
+    <!-- Product Listing -->
+     
+<div class="product_list">
+  <% data.product_list.forEach(product_list => { %>
+    <div>
+
+      <!-- CLICKABLE PRODUCT -->
+      <a href="/product/<%= product_list.id %>">
+        <img class="p_items"
+             src="/photoes/<%= product_list.image %>"
+             alt="">
+      </a>
+
+      <span class="details">
+        <h5 id="title"><%= product_list.tittle %></h5>
+        <p><%= product_list.Delivery %></p>
+        <h6><%= product_list.discount %></h6>
+
+        <h5 class="price">
+          ₹<%= product_list.price %>
+          <img src="/photoes/<%= product_list.Assured_Badge %>" alt="">
+        </h5>
+      </span>
+
+    </div>
+  <% }) %>
+</div>
+
+<script src="/js/script.js"></script>
+</body>
+</html>

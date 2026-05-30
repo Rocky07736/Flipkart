@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Mobiles",
+      "image": "OIP.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Fashon",
+      "image": "fashon.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Electronics",
+      "image": "electronics.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Cameras",
+      "image": "mobile.jpg"
+    }
+  ], 
+  "banner": [
+    {
+      "image": "banner.webp"
+    },
+
+     {
+      "image": "Buds.jpeg"
+    },
+
+     {
+      "image": "laptop.jpg"
+    },
+
+     {
+      "image": "Laptop.jpeg"
+    }
+  ],
+
+  "product_list":[
+    {  
+      "id":1,
+       "image":"shoes2.webp",
+        "tittle": "blue TAPE",
+        "contrnt": "Reds TApew contain",
+        "Delivery": "Free Delivery in Two Day",
+        "discount": "90% off",
+        "price": 99,
+        "Assured_Badge": "assured-removebg-preview.png"
+    },
+
+     {  "id":2,
+       "image":"shoes3.webp",
+        "tittle": "RED TAPE",
+        "Delivery": "Free Delivery in Two Day",
+        "discount": "90% off",
+        "price": 2,
+        "Assured_Badge": "assured-removebg-preview.png"
+    },
+
+     {  "id":3,
+       "image":"shoes4.webp",
+        "tittle": "RED TAPE",
+        "Delivery": "Free Delivery in Two Day",
+        "discount": "90% off",
+        "price": 999,
+        "Assured_Badge": "assured-removebg-preview.png"
+    },
+
+     {  "id":4,
+       "image":"shoes5.webp",
+        "tittle": "RED TAPE",
+        "Delivery": "Free Delivery in Two Day",
+        "discount": "90% off",
+        "price": 999,
+        "Assured_Badge": "assured-removebg-preview.png"
+    },
+
+     {  "id":5,
+       "image":"shoes6.webp",
+        "tittle": "RED TAPE",
+        "Delivery": "Free Delivery in Two Day",
+        "discount": "90% off",
+        "price": 999,
+        "Assured_Badge": "assured-removebg-preview.png"
+    },
+
+     {  "id":6,
+       "image":"shoes7.webp",
+        "tittle": "RED TAPE",
+        "Delivery": "Free Delivery in Two Day",
+        "discount": "90% off",
+        "price": 999,
+        "Assured_Badge": "assured-removebg-preview.png"
+    },
+
+     {  "id":7,
+       "image":"shoes2.webp",
+        "tittle": "RED TAPE",
+        "Delivery": "Free Delivery in Two Day",
+        "discount": "90% off",
+        "price": 999,
+        "Assured_Badge": "assured-removebg-preview.png"
+    },
+
+
+     {  "id":8,
+       "image":"shoes3.webp",
+        "tittle": "RED TAPE",
+        "Delivery": "Free Delivery in Two Day",
+        "discount": "90% off",
+        "price": 999,
+        "Assured_Badge": "assured-removebg-preview.png"
+    },
+
+     {  "id":9,
+       "image":"shoes4.webp",
+        "tittle": "RED TAPE",
+        "Delivery": "Free Delivery in Two Day",
+        "discount": "90% off",
+        "price": 999,
+        "Assured_Badge": "assured-removebg-preview.png"
+    }
+    
+  ]
+}

@@ -1,0 +1,294 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, sans-serif;
+}
+
+body{
+    background-color: #f0f0f0;
+}
+
+header{
+    background-color: #2775ef;
+    height: 105px;
+    width: 100%;
+        /* background-color: #ef2738; */
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+/*  Logo */
+.logo{
+    display: flex;
+    gap: 7px;
+    margin-top: 1px;
+}
+.logo img{
+    height: 70px;
+    width: 70px;
+}
+
+.logo i{
+    color: white;
+    margin: 22px 0px 0px 10px;
+}
+
+/* Cart */
+
+.cart{
+    color: white;
+    margin: 24px 10px 0px 0px;
+}
+.search{
+      position: relative;
+}
+.search input{
+    width: 80%;
+    height: 32px;
+    border-radius: 10%;
+    position: relative;
+    bottom: 10px;
+    left: 20px;
+    padding: 10px;
+}
+
+.search{
+    display: block;
+}
+.search i{
+    color: white;
+    margin-left: 15px;
+    border-radius: 2%;
+    position: relative;
+    bottom: 9px;
+    left: 5px;
+    font-size: 18px;
+}
+
+/* product_category */
+
+.product_category{
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 100px;
+    gap: 10px;
+    margin: 10px;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.p1 {
+    display: flex;
+    flex-direction: column;   /* stack image + text */
+    align-items: center;
+}
+
+.product_category .p1 .img-box{
+    height: 30px;
+    width: 30px;
+    overflow: hidden;
+    border-radius: 50%;
+
+}
+
+.product_category .p1 img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+/* Item Name */
+
+.item-name {
+    margin-top: 6px;
+    font-size: 12px;
+    text-align: center;
+}
+
+/*  Ads banner */
+
+.banner{
+    margin: 35px auto;
+    width: 90%;
+    height: 150px;
+    overflow: hidden;
+    overflow-x: auto;
+    display: flex;
+    gap: 10px;
+}
+
+
+.banner::-webkit-scrollbar{
+    display: none;
+
+}
+
+.banner img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    animation: spin 4s infinite;
+}
+
+/*  */
+
+.live_sale{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    /* margin-bottom: 100px; */
+    justify-content: space-around;
+    text-align: center;
+    /* border: 2px solid black; */
+}
+
+.deals h3{
+    color: #2775ef;
+    margin-top: 1rem;
+
+}
+
+.live_sale button{
+    height: 20px;
+    color: red;
+    font-weight: 800;
+    padding: 4px 10px 5px 10px;
+    margin-top: 1rem;
+    text-align: center;
+    border: none;
+}
+
+#timer{
+    color: rgb(250, 113, 113);
+}
+
+/* Product Listings */
+.product_list{
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 10px;
+}
+
+.product_list a {
+  display: block;
+}
+
+.product_list > div{
+  height: 300px;
+  margin: 0px 7px 0px 7px;
+}
+
+.product_list > div img{
+  height: 190px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.product_list > div .p_items{
+    filter: drop-shadow(0 3px 2px #0009);
+
+}
+
+
+.details{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    gap: 0.4rem;
+    margin-top: 10px;
+}
+
+.details #tittle{
+   color: #2775ef;
+}
+
+.details h6{
+    color: green;
+}
+.price {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.price img {
+    height: 18px !important;
+    width: 80px !important;
+    display: inline-block;
+}
+
+.details p{
+    font-size: 13px;
+}
+
+footer{
+    display: flex;
+    height: 20px;
+    align-items: center;
+    justify-content: space-evenly;
+    color: aliceblue;
+    font-size: 15px;
+    border-radius: 2px;
+    margin-top: 10px;
+    background-color: #2775ef;
+}
+
+
+@keyframes spin {
+    from {translate: 0;}
+    to{translate: -100%;}
+}
+
+@media (min-width:768px){
+    .banner{
+        height: 300px;
+        gap: 15px;
+    }
+
+    header{
+        height: 110px;
+    }
+
+    .search input{
+    width: 90%;
+    height: 35px;
+    border-radius: 10px;
+    position: relative;
+    bottom: 10px;
+    left: 10px;
+    padding: 10px;
+}
+
+.search{
+    margin-bottom: 5rem;
+}
+
+/*  Product listings */
+.product_list{
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 10px;
+}
+
+
+.product_list > div{
+  height: 550px;
+  margin: 0px 7px 0px 7px;
+}
+
+.product_list > div img{
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+}
+
+}

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Add Delivery Address</title>
+
+  <link rel="stylesheet"
+        href="/css/address.css">
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+
+    <div class="nav-left">
+
+      <i class="fa-solid fa-arrow-left back-icon"></i>
+
+      <div class="title">
+        Add delivery address
+      </div>
+
+    </div>
+
+
+
+    <div class="nav-right">
+
+      <i class="fa-solid fa-magnifying-glass"></i>
+
+      <i class="fa-solid fa-cart-shopping"></i>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- FORM -->
+  <form action="/address/payment"
+        method="get">
+
+    <!-- HIDDEN PRODUCT DATA -->
+    <input
+      type="hidden"
+      name="price"
+      value="<%= price %>"
+    >
+
+    <input
+      type="hidden"
+      name="name"
+      value="<%= name %>"
+    >
+
+     <input
+      type="hidden"
+      name="image1"
+      value="<%= image1 %>"
+    >
+
+
+
+    <!-- FULL NAME -->
+    <div class="field">
+
+      <label>
+        Full Name (Required) *
+      </label>
+
+      <input
+        type="text"
+        name="fullname"
+        placeholder="Enter your full name"
+        required
+      >
+
+    </div>
+
+
+
+    <!-- MOBILE -->
+    <div class="field">
+
+      <label>
+        Mobile Number
+      </label>
+
+      <input
+        type="text"
+        name="mobile"
+        placeholder="8080808080"
+      >
+
+    </div>
+
+
+
+   
+
+
+
+    <!-- PINCODE + LOCATION -->
+    <div class="row">
+
+      <div class="field">
+
+        <label>
+          Pincode (Required) *
+        </label>
+
+        <input
+          type="text"
+          name="pincode"
+          placeholder="841236"
+        >
+
+      </div>
+
+
+
+      <div class="field">
+
+        <button type="button"
+                class="location-btn">
+
+          <i class="fa-solid fa-location-crosshairs"></i>
+
+          Use my location
+
+        </button>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- STATE + CITY -->
+    <div class="row">
+
+      <div class="field">
+
+        <label>
+          State (Required) *
+        </label>
+
+        <input
+          type="text"
+          name="state"
+          placeholder="Delhi"
+        >
+
+      </div>
+
+
+
+      <div class="field">
+
+        <label>
+          City (Required) *
+        </label>
+
+        <input
+          type="text"
+          name="city"
+          placeholder="New Delhi"
+        >
+
+      </div>
+
+    </div>
+
+
+
+    <!-- HOUSE -->
+    <div class="field">
+
+      <label>
+        House No., Building Name (Required) *
+      </label>
+
+      <input
+        type="text"
+        name="house"
+        placeholder="58, Azad Society"
+      >
+
+    </div>
+
+
+
+    <!-- ROAD -->
+    <div class="field">
+
+      <label>
+        Road name, Area, Colony (Required) *
+      </label>
+
+      <input
+        type="text"
+        name="road"
+        placeholder="M.H. Nagar Hasanpura"
+      >
+
+    </div>
+
+
+
+   
+
+
+
+    <!-- ADDRESS TYPE -->
+    <div class="address-type">
+
+      <p>
+        Type of address
+      </p>
+
+
+
+      <div class="type-box">
+
+        <button type="button"
+                class="type-btn active">
+
+          <i class="fa-solid fa-house"></i>
+
+          Home
+
+        </button>
+
+
+
+        <button type="button"
+                class="type-btn">
+
+          <i class="fa-solid fa-building"></i>
+
+          Work
+
+        </button>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- SAVE BUTTON -->
+    <button class="save-btn">
+
+      Save Address
+
+    </button>
+
+  </form>
+
+</div>
+
+</body>
+</html>

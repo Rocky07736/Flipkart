@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Order Summary</title>
+
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- RAZORPAY -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background: #f1f3f6;
+        padding-bottom: 90px;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 500px;
+        margin: auto;
+        min-height: 100vh;
+      }
+
+      /* NAVBAR */
+
+      .navbar {
+        height: 60px;
+        background: #2874f0;
+
+        color: white;
+
+        display: flex;
+        align-items: center;
+
+        gap: 20px;
+
+        padding: 0 15px;
+
+        font-size: 20px;
+      }
+
+      .navbar i {
+        font-size: 22px;
+        cursor: pointer;
+      }
+
+      /* PRODUCT CARD */
+
+      .product-card {
+        background: white;
+
+        margin-top: 10px;
+
+        padding: 15px;
+
+        display: flex;
+        justify-content: space-between;
+
+        gap: 15px;
+      }
+
+      .product-left {
+        flex: 1;
+      }
+
+      .product-name {
+        font-size: 20px;
+        font-weight: 500;
+
+        margin-bottom: 10px;
+      }
+
+      .product-desc {
+        color: gray;
+        margin-bottom: 10px;
+
+        font-size: 15px;
+      }
+
+      .price-box {
+        display: flex;
+        align-items: center;
+
+        gap: 10px;
+
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      .old-price {
+        color: gray;
+        text-decoration: line-through;
+
+        font-size: 18px;
+      }
+
+      .new-price {
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .discount {
+        color: green;
+        font-weight: bold;
+      }
+
+      .delivery {
+        margin-top: 10px;
+        font-size: 16px;
+      }
+
+      .delivery span {
+        color: green;
+        font-weight: bold;
+      }
+
+      .product-image img {
+        width: 110px;
+        height: 140px;
+
+        object-fit: contain;
+      }
+
+      /* PRICE DETAILS */
+
+      .price-details {
+        background: white;
+
+        margin-top: 10px;
+
+        padding: 20px;
+      }
+
+      .price-details h2 {
+        margin-bottom: 25px;
+      }
+
+      .row {
+        display: flex;
+        justify-content: space-between;
+
+        margin-bottom: 20px;
+
+        font-size: 18px;
+      }
+
+      .green {
+        color: green;
+      }
+
+      hr {
+        border: 1px dashed #ddd;
+
+        margin-bottom: 20px;
+      }
+
+      .total {
+        font-size: 22px;
+        font-weight: bold;
+      }
+
+      .save {
+        color: green;
+        font-weight: bold;
+
+        margin-top: 20px;
+
+        font-size: 18px;
+      }
+
+      /* BOTTOM BAR */
+
+      .bottom-bar {
+        position: fixed;
+
+        bottom: 0;
+        left: 0;
+
+        width: 100%;
+
+        background: white;
+
+        padding: 10px 15px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .bottom-price {
+        font-size: 30px;
+        font-weight: bold;
+      }
+
+      .view {
+        color: #2874f0;
+
+        font-size: 15px;
+      }
+
+      .continue-btn {
+        background: #fb641b;
+
+        color: white;
+
+        border: none;
+
+        padding: 15px 35px;
+
+        font-size: 18px;
+        font-weight: bold;
+
+        border-radius: 3px;
+
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- NAVBAR -->
+      <div class="navbar">
+        <i class="fa-solid fa-arrow-left" onclick="history.back()"></i>
+
+        <p>Order Summary</p>
+      </div>
+
+      <!-- PRODUCT CARD -->
+      <div class="product-card">
+        <div class="product-left">
+          <h2 class="product-name"><%= name %></h2>
+
+          <p class="product-desc"><%= name %></p>
+
+          <div class="price-box">
+            <span class="old-price"> ₹<%= Number(price) + 1000 %> </span>
+
+            <span class="new-price"> ₹<%= price %> </span>
+
+            <span class="discount"> 59% off </span>
+          </div>
+
+          <p class="delivery">
+            Delivery within 7 days |
+
+            <span> Free Delivery </span>
+          </p>
+        </div>
+
+        <div class="product-image">
+          <img src="/photoes/<%= image1 %>" alt="<%= name %>" />
+        </div>
+      </div>
+
+      <!-- PRICE DETAILS -->
+      <div class="price-details">
+        <h2>Price Details</h2>
+
+        <div class="row">
+          <p>Price (1 item)</p>
+
+          <p>₹<%= Number(price) + 1000 %></p>
+        </div>
+
+        <div class="row">
+          <p>Discount</p>
+
+          <p class="green">- ₹1000</p>
+        </div>
+
+        <div class="row">
+          <p>Delivery Charges</p>
+
+          <p class="green">Free</p>
+        </div>
+
+        <hr />
+
+        <div class="row total">
+          <p>Total Amount</p>
+
+          <p>₹<%= price %></p>
+        </div>
+
+        <p class="save">You will save ₹1000 on this order</p>
+      </div>
+    </div>
+
+    <!-- BOTTOM BAR -->
+    <div class="bottom-bar">
+      <div>
+        <div class="bottom-price">₹<%= price %></div>
+
+        <div class="view">View price details</div>
+      </div>
+
+      <form method="post" action="/qr">
+        <button class="continue-btn" id="continue-btn">CONTINUE</button>
+      </form>
+    </div>
+
+    <!-- PAYMENT SCRIPT -->
+    <script>
+
+    const continueBtn =
+        document.getElementById(
+            "continue-btn"
+        );
+
+
+
+    continueBtn.addEventListener(
+
+        "click",
+
+        async () => {
+
+            try{
+
+                console.log(
+                    "PRICE FROM EJS:",
+                    Number("<%= price %>")
+                );
+
+
+
+                // CREATE ORDER
+                const response =
+                    await fetch(
+
+                        "/api/create-order",
+
+                        {
+
+                            method: "POST",
+
+                            headers: {
+
+                                "Content-Type":
+                                "application/json"
+
+                            },
+
+                            body: JSON.stringify({
+
+                                amount:
+                                Number("<%= price %>")
+
+                            })
+
+                        }
+
+                    );
+
+
+
+                const order =
+                    await response.json();
+
+                console.log(order);
+
+
+
+                // RAZORPAY OPTIONS
+                const options = {
+
+                    key:
+                    "<%= key_id %>",
+
+                    amount:
+                    order.amount,
+
+                    currency:
+                    order.currency,
+
+                    order_id:
+                    order.order_id,
+
+                    name:
+                    "Flipkart",
+
+                    description:
+                    "<%= name %>",
+
+                    image:
+                    "/photoes/<%= image1 %>",
+
+
+
+                    handler:
+                    async function (response){
+
+                        const verifyResponse =
+                            await fetch(
+
+                                "/api/verify-payment",
+
+                                {
+
+                                    method: "POST",
+
+                                    headers: {
+
+                                        "Content-Type":
+                                        "application/json"
+
+                                    },
+
+                                    body:
+                                    JSON.stringify(response)
+
+                                }
+
+                            );
+
+
+
+                        const result =
+                            await verifyResponse.json();
+
+
+
+                        if(result.success){
+
+                            alert(
+                                "Payment Successful ✅"
+                            );
+
+
+
+                            window.location.href =
+                                "/success";
+
+                        }else{
+
+                            alert(
+                                "Payment Verification Failed ❌"
+                            );
+
+                        }
+
+                    },
+
+
+
+                    modal: {
+
+                        ondismiss: function () {
+
+                            alert(
+                                "Payment Cancelled"
+                            );
+
+                        }
+
+                    },
+
+
+
+                    theme: {
+
+                        color: "#2874f0"
+
+                    }
+
+                };
+
+
+
+                const rzp =
+                    new Razorpay(options);
+
+
+
+                rzp.on(
+
+                    "payment.failed",
+
+                    function (response){
+
+                        console.log(response.error);
+
+                        alert(
+                            "Payment Failed ❌"
+                        );
+
+                    }
+
+                );
+
+
+
+                rzp.open();
+
+            }catch(error){
+
+                console.log(error);
+
+                alert(
+                    "Something went wrong"
+                );
+
+            }
+
+        }
+
+    );
+
+</script>
+  </body>
+</html>

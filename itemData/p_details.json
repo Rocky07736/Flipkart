@@ -1,0 +1,57 @@
+{  
+  "AllDeta":[
+    {
+      "id":1,
+      "image1": "shoes1.webp",
+      "image2": "shoes4.webp",
+      "image3": "shoes3.webp",
+      "price": 99,
+      "discount":"90% off",
+     "description":"Soothing Insole & Impact-Resistant Comfort Sneakers For Women - Buy RED TAPE | Elegantly Rounded Front"
+    },
+
+     {
+      "id":2,
+      "image1": "shoes2.webp",
+      "image2": "shoes2.webp",
+      "image3": "shoes3.webp",
+      "price": 2,
+      "discount":"80% off",
+      "description":"Soothing Insole & Impact-Resistant Comfort Sneakers For Women - Buy RED TAPE | Elegantly Rounded Front"
+    },
+
+     {
+      "id":3,
+      "image1": "shoes2.webp",
+      "image2": "shoes2.webp",
+      "image3": "shoes3.webp",
+      "price": 999,
+      "discount":"90% off",
+     "description":"Soothing Insole & Impact-Resistant Comfort Sneakers For Women - Buy RED TAPE | Elegantly Rounded Front"
+    },
+
+     {
+      "id":4,
+      "image1": "shoes2.webp",
+      "image2": "shoes2.webp",
+      "image3": "shoes3.webp",
+      "price": 199,
+      "discount":"90% off",
+     "description":"Soothing Insole & Impact-Resistant Comfort Sneakers For Women - Buy RED TAPE | Elegantly Rounded Front"
+    },
+
+     {
+      "id":5,
+      "image1": "shoes2.webp",
+      "image2": "shoes2.webp",
+      "image3": "shoes3.webp",
+      "price": 199,
+      "discount":"90% off",
+     "description":"Soothing Insole & Impact-Resistant Comfort Sneakers For Women - Buy RED TAPE | Elegantly Rounded Front"
+    }
+
+    
+  ]
+
+
+}

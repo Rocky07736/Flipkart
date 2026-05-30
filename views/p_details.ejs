@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet"
+          href="/css/p_details.css">
+    <link rel="stylesheet"
+          href="/css/style.css">
+    <title> Product Details  </title>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Favourite Icon -->
+    <div class="icon">
+        <i class="fa-solid fa-heart"></i>
+    </div>
+
+    <!-- IMAGE SLIDER -->
+    <div class="wrapper">
+        <div class="wrapper-holder">
+            <div class="slidrImg">
+                <img src="/photoes/<%= product.image1 %>"alt="product image">
+            </div>
+
+            <div class="slidrImg">
+                <img src="/photoes/<%= product.image2 %>" alt="product image">
+            </div>
+
+            <div class="slidrImg">
+                <img  src="/photoes/<%= product.image3 %>"  alt="product image" >
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- SLIDER BUTTONS -->
+    <div class="button-holder">
+
+        <a href="#" class="button"></a>
+
+        <a href="#" class="button"></a>
+
+        <a href="#" class="button"></a>
+
+    </div>
+
+</div>
+
+
+
+<!-- SIZE SECTION -->
+<div class="size-box">
+
+    <h3> Select Size </h3>
+
+    <div class="sizes">
+
+        <button class="size"> 6 UK </button>
+        <button class="size"> 7 UK</button>
+        <button class="size">  8 UK</button>
+        <button class="size"> 9 UK </button>
+
+    </div>
+
+    <hr>
+
+</div>
+
+
+
+<!-- DESCRIPTION -->
+<div class="description">
+
+    <div class="content">
+
+        <p>
+            <%= product.description %>
+        </p>
+
+
+
+        <button>
+            4.2 ★
+        </button>
+
+
+
+        <div class="priced">
+
+            <h5 class="price">
+
+                ₹<%= product.price %>
+
+                <img
+                    src="/photoes/Assured-removebg-preview.png"
+                    alt="Assured"
+                >
+
+            </h5>
+
+
+
+            <h6 class="discount">
+
+                <%= product.discount %>
+
+            </h6>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- BUTTONS -->
+<<div class="buttons">
+
+    <!-- ADD TO CART -->
+    <a
+      class="anc"
+      href="/address?price=<%= product.price %>&name=<%= product.description %>&image1=<%= product.image1 %>">
+
+        <button type="button" class="btn btn1">
+            Add to Cart
+        </button>
+
+    </a>
+
+
+
+    <!-- BUY NOW -->
+    <a
+      class="anc"
+      href="/address?price=<%= product.price %>&name=<%= product.description %>&image1=<%= product.image1 %>">
+
+        <button type="button" class="btn btn2">
+            Buy Now
+        </button>
+
+    </a>
+
+</div>
+
+
+
+</body>
+</html>

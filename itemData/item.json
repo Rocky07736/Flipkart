@@ -48,7 +48,7 @@
         "Delivery": "Free Delivery in Two Day",
         "discount": "90% off",
         "price": 99,
-        "Assured_Badge": "assured-removebg-preview.png"
+        "badge": "assured-removebg-preview.png"
     },
 
      {  "id":2,
@@ -57,7 +57,7 @@
         "Delivery": "Free Delivery in Two Day",
         "discount": "90% off",
         "price": 2,
-        "Assured_Badge": "assured-removebg-preview.png"
+        "badge": "assured-removebg-preview.png"
     },
 
      {  "id":3,
@@ -66,7 +66,7 @@
         "Delivery": "Free Delivery in Two Day",
         "discount": "90% off",
         "price": 999,
-        "Assured_Badge": "assured-removebg-preview.png"
+        "badge": "assured-removebg-preview.png"
     },
 
      {  "id":4,
@@ -75,7 +75,7 @@
         "Delivery": "Free Delivery in Two Day",
         "discount": "90% off",
         "price": 999,
-        "Assured_Badge": "assured-removebg-preview.png"
+        "badge": "assured-removebg-preview.png"
     },
 
      {  "id":5,
@@ -84,7 +84,7 @@
         "Delivery": "Free Delivery in Two Day",
         "discount": "90% off",
         "price": 999,
-        "Assured_Badge": "assured-removebg-preview.png"
+        "badge": "assured-removebg-preview.png"
     },
 
      {  "id":6,
@@ -93,7 +93,7 @@
         "Delivery": "Free Delivery in Two Day",
         "discount": "90% off",
         "price": 999,
-        "Assured_Badge": "assured-removebg-preview.png"
+        "badge": "assured-removebg-preview.png"
     },
 
      {  "id":7,
@@ -102,7 +102,7 @@
         "Delivery": "Free Delivery in Two Day",
         "discount": "90% off",
         "price": 999,
-        "Assured_Badge": "assured-removebg-preview.png"
+        "badge": "assured-removebg-preview.png"
     },
 
 
@@ -112,7 +112,7 @@
         "Delivery": "Free Delivery in Two Day",
         "discount": "90% off",
         "price": 999,
-        "Assured_Badge": "assured-removebg-preview.png"
+        "badge": "assured-removebg-preview.png"
     },
 
      {  "id":9,
@@ -121,7 +121,7 @@
         "Delivery": "Free Delivery in Two Day",
         "discount": "90% off",
         "price": 999,
-        "Assured_Badge": "assured-removebg-preview.png"
+        "badge": "assured-removebg-preview.png"
     }
     
   ]
